@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+   http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <display-name>PhoneBook on Servlets</display-name>
+
+    <servlet>
+        <servlet-name>getAllContactsServlet</servlet-name>
+        <servlet-class>fytyr.phoneBook.servlet.GetAllContactsServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddContactsServlet</servlet-name>
+        <servlet-class>fytyr.phoneBook.servlet.AddContactServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeleteContactServlet</servlet-name>
+        <servlet-class>fytyr.phoneBook.servlet.DeleteContactServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SearchContactsServlet</servlet-name>
+        <servlet-class>fytyr.phoneBook.servlet.SearchContactServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getAllContactsServlet</servlet-name>
+        <url-pattern>/phonebook/get/all</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddContactsServlet</servlet-name>
+        <url-pattern>/phonebook/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeleteContactServlet</servlet-name>
+        <url-pattern>/phonebook/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SearchContactsServlet</servlet-name>
+        <url-pattern>/phonebook/search</url-pattern>
+    </servlet-mapping>
+
+</web-app>
