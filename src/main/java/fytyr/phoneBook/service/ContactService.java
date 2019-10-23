@@ -23,19 +23,19 @@ public class ContactService {
     public ContactValidation validateContact(Contact contact) {
         ContactValidation contactValidation = new ContactValidation();
         contactValidation.setValid(true);
-        if (contact.getFirstName().isEmpty()) {
+        if (contact.getFirstName().trim().isEmpty()) {
             contactValidation.setValid(false);
             contactValidation.setError("Поле Имя должно быть заполнено.");
             return contactValidation;
         }
 
-        if (contact.getLastName().isEmpty()) {
+        if (contact.getLastName().trim().isEmpty()) {
             contactValidation.setValid(false);
             contactValidation.setError("Поле Фамилия должно быть заполнено.");
             return contactValidation;
         }
 
-        if (contact.getPhone().isEmpty()) {
+        if (contact.getPhone().trim().isEmpty()) {
             contactValidation.setValid(false);
             contactValidation.setError("Поле Телефон должно быть заполнено.");
             return contactValidation;
